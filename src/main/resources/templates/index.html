@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>問い合わせ分類</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body th:inline="text">
+    <h1>問い合わせ分類</h1>
+
+    <form method="post" action="/classify">
+      <label for="inquiry">問い合わせを入力してください</label>
+      <br />
+
+      <textarea
+        id="inquiry"
+        name="inquiry"
+        rows="6"
+        cols="60"
+        th:text="${inquiry}"
+      ></textarea>
+      <br />
+
+      <button type="submit">分類する</button>
+    </form>
+
+    <p th:if="${error != null}" th:text="${error}"></p>
+
+    <div th:if="${category != null}">
+      <h2>AI判定結果</h2>
+
+      <p>
+        問い合わせ：
+        <span th:text="${inquiry}"></span>
+      </p>
+
+      <p>
+        カテゴリー：
+        <strong th:text="${category}"></strong>
+      </p>
+
+      <p>
+        優先度：
+        <strong th:text="${priority}"></strong>
+      </p>
+    </div>
+  </body>
+</html>
