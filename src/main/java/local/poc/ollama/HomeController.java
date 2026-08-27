@@ -9,10 +9,10 @@ import org.springframework.ui.Model;
 @Controller
 public class HomeController {
 
-  private final OllamaService ollamaService;
+  private final InquiryService inquiryService;
 
-  public HomeController(OllamaService ollamaService) {
-    this.ollamaService = ollamaService;
+  public HomeController(InquiryService inquiryService) {
+    this.inquiryService = inquiryService;
   }
 
   @GetMapping("/")
@@ -33,7 +33,7 @@ public class HomeController {
     model.addAttribute("inquiry", inquiry);
 
     try {
-      ClassificationResult result = ollamaService.classify(inquiry);
+      ClassificationResult result = inquiryService.classify(inquiry);
 
       model.addAttribute("category", result.category());
       model.addAttribute("priority", result.priority());
