@@ -15,14 +15,16 @@ public class Inquiry {
   private String inquiryText;
   private String category;
   private String priority;
+  private boolean inScope;
 
   public Inquiry() {
   }
 
-  public Inquiry(String inquiryText, String category, String priority) {
+  public Inquiry(String inquiryText, String category, String priority, boolean inScope) {
       this.inquiryText = inquiryText;
       this.category = category;
       this.priority = priority;
+      this.inScope = inScope;
   }
 
   public Long getId() {
@@ -39,5 +41,9 @@ public class Inquiry {
 
   public String getPriority() {
       return priority;
+  }
+
+  public boolean getInScope() {
+    return inScope;
   }
 }

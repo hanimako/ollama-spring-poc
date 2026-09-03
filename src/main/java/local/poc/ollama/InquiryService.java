@@ -26,7 +26,8 @@ public class InquiryService {
     Inquiry inquiryEntity = new Inquiry(
         inquiry,
         result.category(),
-        result.priority()
+        result.priority(),
+        result.inScope()
     );
 
     inquiryRepository.save(inquiryEntity);

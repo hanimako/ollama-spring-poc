@@ -37,6 +37,7 @@ public class HomeController {
 
       model.addAttribute("category", result.category());
       model.addAttribute("priority", result.priority());
+      model.addAttribute("inScope", result.inScope());
     } catch(Exception e) {
       model.addAttribute("error", "AIによる分類に失敗しました。Ollamaが起動いてるか確認してください。");
     }
