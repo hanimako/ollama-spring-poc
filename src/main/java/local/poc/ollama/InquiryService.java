@@ -27,7 +27,8 @@ public class InquiryService {
         inquiry,
         result.category(),
         result.priority(),
-        result.inScope()
+        result.inScope(),
+        result.needsEscalation()
     );
 
     inquiryRepository.save(inquiryEntity);

@@ -28,25 +28,25 @@
 
     <div th:if="${category != null}">
       <h2>AI判定結果</h2>
-
       <p>
         問い合わせ：
         <span th:text="${inquiry}"></span>
       </p>
-
       <p>
         カテゴリー：
         <strong th:text="${category}"></strong>
       </p>
-
       <p>
         優先度：
         <strong th:text="${priority}"></strong>
       </p>
-
       <p>
         対象判定：
         <strong th:text="${inScope}"></strong>
+      </p>
+      <p>
+        要エスカレーション：
+        <strong th:text="${needsEscalation}"></strong>
       </p>
     </div>
   </body>

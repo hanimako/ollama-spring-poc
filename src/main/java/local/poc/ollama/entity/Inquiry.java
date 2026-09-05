@@ -16,15 +16,17 @@ public class Inquiry {
   private String category;
   private String priority;
   private boolean inScope;
+  private boolean needsEscalation;
 
   public Inquiry() {
   }
 
-  public Inquiry(String inquiryText, String category, String priority, boolean inScope) {
+  public Inquiry(String inquiryText, String category, String priority, boolean inScope, boolean needsEscalation) {
       this.inquiryText = inquiryText;
       this.category = category;
       this.priority = priority;
       this.inScope = inScope;
+      this.needsEscalation = needsEscalation;
   }
 
   public Long getId() {
@@ -45,5 +47,9 @@ public class Inquiry {
 
   public boolean getInScope() {
     return inScope;
+  }
+
+  public boolean getNeedsEscalation() {
+    return needsEscalation;
   }
 }

@@ -1,4 +1,4 @@
 package local.poc.ollama;
 
-public record ClassificationResult (String category, String priority, boolean inScope){
+public record ClassificationResult (String category, String priority, boolean inScope, boolean needsEscalation){
 }
